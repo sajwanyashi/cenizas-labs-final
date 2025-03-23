@@ -53,9 +53,3 @@ npm run dev
 3️⃣ Receive responses based on the uploaded file
 4️⃣ Uploading a new PDF clears chat history
 
-📌 API Endpoints
-Method	Endpoint	Description
-POST	/upload/	Uploads and processes a PDF
-POST	/query/	Queries the chatbot for answers
-
-
