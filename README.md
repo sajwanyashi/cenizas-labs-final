@@ -33,11 +33,11 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 
 📌 Set Up API Keys
-Create a .env file in the backend directory and add your Google API key:
+In the .env file in the backend directory and add your Google API key:
 GOOGLE_API_KEY=your_api_key_here
 
 📌 Run the Backend Server
-python3 uvicorn main:app --reload
+python3 -m uvicorn main:app --reload
 The FastAPI server will start at:
 📍 http://127.0.0.1:8000
 
