@@ -1,0 +1,36 @@
+Project Summary: PDF Chatbot using FastAPI & React
+This project is an AI-powered chatbot that allows users to upload a PDF, ask questions about its content, and receive responses based on the document. The application consists of a FastAPI backend and a React.js frontend, with Google Generative AI handling embeddings and conversational responses.
+
+What We Have Done:
+- Implemented a FastAPI backend to process PDF files, extract text using PyPDF2, and store vector embeddings using FAISS.
+- Integrated Google Generative AI to generate responses based on the uploaded document.
+- Developed a React frontend with a modern UI, interactive elements, and smooth transitions.
+- Ensured chat history resets when a new PDF is uploaded, preventing data from previous PDFs from influencing responses.
+- Added UI enhancements, replacing buttons with file upload and send message icons, similar to ChatGPT’s UI.
+- Validated input, preventing users from asking questions before uploading a PDF.
+- Created a structured API with two endpoints:
+
+/upload/ → Upload and process a PDF
+/query/ → Ask questions based on the PDF content
+This project demonstrates how AI-powered document processing can be used to interactively query PDFs, making information extraction easier and more efficient. 🚀
+
+
+
+Challenges Faced
+1. Persisting Chat Context with New PDFs:
+Initially, when a new PDF was uploaded, the bot retained knowledge of the previous document. We fixed this by clearing the FAISS index and ensuring the chatbot only responds based on the most recently uploaded file.
+
+2. Ensuring Users Upload a PDF Before Asking Questions:
+Users could initially ask questions without uploading a file, leading to meaningless responses. We added front-end validation and a backend check to enforce PDF uploads before querying.
+
+3. Managing Large PDF Files Efficiently:
+Processing large PDFs in a single step led to performance issues. We solved this by splitting the text into chunks using LangChain’s RecursiveCharacterTextSplitter, allowing efficient embedding and retrieval.
+
+4. Handling Cross-Origin Requests (CORS Issues):
+Since the frontend and backend were running on different ports, CORS errors occurred. We solved this by adding CORS middleware to FastAPI, allowing smooth communication between React and FastAPI.
+
+5. Ensuring Smooth Animations & User Experience:
+The interactive gradient effect and smooth chat scrolling required CSS and JavaScript optimizations, ensuring a lag-free, visually appealing experience.
+
+
+Each of these challenges helped refine the project, making it more robust, efficient, and user-friendly. 🚀
