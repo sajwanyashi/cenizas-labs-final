@@ -31,6 +31,7 @@ This project is a chatbot that allows users to upload a PDF, ask questions about
 
 ## **📌 Installation Guide**
 ```bash
+1. Clone the repository
 git clone https://github.com/your-username/pdf-chatbot.git
 cd pdf-chatbot
 
