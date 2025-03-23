@@ -22,16 +22,20 @@ Python-dotenv (for environment variables)
 🔹 1. Clone the Repository
 git clone https://github.com/your-username/pdf-chatbot.git
 cd pdf-chatbot
+
 🔹 2. Set Up the Backend
 📌 Create a Virtual Environment
 python -m venv venv
 source venv/bin/activate   # macOS/Linux
 venv\Scripts\activate      # Windows
+
 📌 Install Dependencies
 pip install -r requirements.txt
+
 📌 Set Up API Keys
 Create a .env file in the backend directory and add your Google API key:
 GOOGLE_API_KEY=your_api_key_here
+
 📌 Run the Backend Server
 python3 uvicorn main:app --reload
 The FastAPI server will start at:
