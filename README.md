@@ -45,7 +45,7 @@ The FastAPI server will start at:
 📌 Install Dependencies
 npm install
 📌 Start the React App
-npm rn dev
+npm run dev
 
 📌 Usage
 1️⃣ Upload a PDF using the file upload icon 📂
